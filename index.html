@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Submission</title>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <div class="form-table-container">
+    <form id="registrationForm" method="get">
+      <label>Full Name:</label></br>
+      <input type="text" name="name" placeholder="Enter Full Name" required>
+    
+      <label>Email:</label></br>
+      <input type="email" name="email" placeholder="Enter Email Address" required>
+    
+      <label>Password:</label></br>
+      <input type="password" name="password" placeholder="Enter Password" required>
+    
+      <label>Gender:</label></br>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label>Message:</label></br>
+      <textarea name="message" placeholder="Enter Your Feedback" required></textarea>
+    
+      <button type="submit">Register</button>
+    </form>
+
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Gender</th>
+          <th>Feedback</th>
+        </tr>
+      </thead>
+      <tbody id="output">
+      </tbody>
+    </table>
+  </div>
+
+  <p id="successMsg" style="color: green; font-weight: bold;"></p>
+  <script src="script.js"></script>
+</body>
+</html>
